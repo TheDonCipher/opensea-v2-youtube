@@ -2,17 +2,19 @@ import Image from 'next/image'
 import { AiOutlineHeart } from 'react-icons/ai'
 
 const style = {
-  wrapper: `relative flex h-[450px] w-[340px] cursor-pointer flex-col rounded-lg bg-white shadow-lg transition-all duration-300 hover:shadow-2xl dark:bg-[#333333]`,
+  wrapper: `relative flex space-x-2 cursor-pointer flex-col rounded-lg bg-[#334155] shadow-lg transition-all duration-300 hover:shadow-2xl dark:bg-[#333333]`,
   imageContainer: `h-3/4 overlow-hidden`,
   nftImage: `rounded-t-lg object-cover`,
   nftLowerContainer: `flex h-1/4 flex-col justify-between p-4`,
   collectionTitle: `text-sm text-gray-500 dark:text-gray-400`,
-  nftTitle: `text-sm font-bold`,
-  priceContainer: `flex flex-col items-end justify-center space-y-1`,
-  wethImageContainer: `flex items-center justify-end space-x-2`,
-  likesContainer: `flex items-center justify-end space-x-2`,
-  heartIcon: `h-3 w-3 text-gray-500 dark:text-gray-400`,
-  likesCounter: `text-xs text-gray-500 dark:text-gray-400`,
+  nftTitle: `text-base font-bold`,
+  priceContainer: `flex flex-col justify-end`,
+  priceTitle: `text-[50] justify-end`,
+  priceValue: `text-[20px]`,
+  wethImageContainer: `flex justify-end space-x-1`,
+  //likesContainer: `flex items-center space-x-2`,
+  //heartIcon: `h-3 w-3 text-gray-500 dark:text-gray-400`,
+  //likesCounter: `text-xs text-gray-500 dark:text-gray-400`,
 }
 
 const NFTCard = ({listing}) => {
@@ -43,8 +45,7 @@ const NFTCard = ({listing}) => {
           </div>
 
           <div className = {style.priceContainer}>
-            <div className = {style.priceTitle}>Buy at
-            </div>
+            <div className = {style.priceTitle}>Buy at</div>
             <div className = {style.wethImageContainer}>
               <Image
                 height = {16}
@@ -58,13 +59,6 @@ const NFTCard = ({listing}) => {
           </div>
         </div>
       </div>
-
-        <div className = {style.likesContainer}>
-          <AiOutlineHeart className = {style.heartIcon}/>
-          <div className = {style.likesCounter}>
-            {listing.asset?.stats?.favorites ?? 0}
-            </div>
-          </div>
     </div>
             
     </div>

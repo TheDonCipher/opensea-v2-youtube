@@ -66,13 +66,14 @@ const Navbar = () => {
   ]
 
   const style = {
-    themeSwitcher: `h-8 w-8 cursor-pointer text-gray-600 transition-all hover:text-black dark:text-gray-300`,
-    wrapper: `sticky top-0 z-50 bg-white px-4 py-2 shadow-md dark:bg-gray-900 flex items-center justify-between space-x-6`,
-    logoContainer: `xl:pr-40`,
+    themeSwitcher: `h-8 w-8 cursor-pointer text-white transition-all hover:text-black dark:text-gray-300`,
+    wrapper: `sticky top-0 z-50 bg-[#9d174d] px-4 py-2 shadow-md dark:bg-gray-900 flex items-center justify-between space-x-6`,
+    //logoContainer: `xl:pr-40`,
+    logoLucello: `text-lg text-white`,
     searchContainer: `ml-8 hidden flex-1 sm:block`,
-    menusContainer: `hidden pr-6 lg:block xl:pl-8,`,
+    menusContainer: `hidden pr-6 lg:block xl:pl-8`,
     iconsContainer: `flex items-center space-x-6`,
-    icons: `h-8 w-8 cursor-pointer text-gray-600 transition-all hover:text-black dark:text-gray-300 hover:dark:text-white`,
+    icons: `h-8 w-8 cursor-pointer text-white transition-all hover:text-black dark:text-gray-300 hover:dark:text-white`,
     desktopIcons: `hidden lg:block`,
     mobileIcons: `sm:hidden`,
     tabletIcons: `lg:hidden`,
@@ -80,10 +81,10 @@ const Navbar = () => {
 
   return (
     <header className={style.wrapper}>
-      <div className={style.logoContainer}>
+      <div className={style.logoLucello}>
         <Link href='/'>
           <a>
-            <Logo />
+            <h1>Lucello & Shuminski</h1>
           </a>
         </Link>
       </div>

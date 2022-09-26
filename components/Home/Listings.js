@@ -9,7 +9,7 @@ const style = {
 
 const Listings = () => {
   const [listings,setListings] = useState([])
-  const marketplace = useMarketplace("0xb9628Cd3E4Dfcb9382246787f3a60Ba18dF6a812") 
+  const marketplace = useMarketplace("0xb9628Cd3E4Dfcb9382246787f3a60Ba18dF6a812") // Change on deployment?
 
 
   
@@ -45,7 +45,7 @@ const Listings = () => {
         ))}
       </>
       ) : (
-        <div>Loading...</div>
+        <div class="text-center">Loading...Please wait</div>
       )} 
     </div>
   )

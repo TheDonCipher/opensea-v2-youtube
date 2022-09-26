@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react'
+import { ThemeProvider } from 'next-themes'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,7 +10,10 @@ function MyApp({ Component, pageProps }) {
        [ChainId.Rinkeby]: 'https://rinkeby.infura.io/v3/03f54d4484414a39b9751613264f2911'
       }}
       >
-        <Component {...pageProps} />
+        <ThemeProvider>
+          <Component {...pageProps} />
+        </ThemeProvider>
+        
     </ThirdwebProvider>
     )
 }
